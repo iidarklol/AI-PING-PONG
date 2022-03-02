@@ -1,0 +1,53 @@
+<!--created by prashant shukla-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ping Pong</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+     
+        <link rel="stylesheet" href="style.css">
+        <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/addons/p5.sound.min.js"></script>   
+        <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    </head>
+    <body background="background1.jpg">
+<center>
+    <h1 class="btn btn-info" style="width: 100%; font-size: 20px; margin:0; text-align: left;">AI Mario Game <button data-toggle="modal" data-target="#instructions" class="btn btn-info" style="float: right;">Instructions</button></h1>
+    <br><br><br>
+    <button id="start" onclick="start()" class="btn btn-success">Start Game!</button>
+    <br><br>
+    <h3 class="btn btn-warning" id="status"></h3>
+
+    <div id="canvas"></div>
+    <br><br><br><br><br>
+    <button class="btn btn-danger" id="restart" onclick="restart()"></button>
+</center>
+        <script src="main.js"></script>
+
+        <div id="instructions" class="modal fade">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button class="close" data-dismiss="modal">&times;</button>
+                  <h1 style="text-align: center;">Instructions</h1>
+                </div>
+                <div class="modal-body">
+                 <ol><li>•Keep your laptop screen straight</li>
+                <li>•Move yourself approximately 3-4 feet away from the laptop</li>
+                <li>•Move your right wrist in an ascending and decending manner, a red dot should appear on your right wrist</li>
+                   <li>•Now press the play button, and again move yourself 3-4 feet away from laptop</li>     
+                <li>•The red paddel is your paddel, that will move as per the movement of your right wrist</li>
+                </ol>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div id="CPF"> Made By: Divyanshu</div>
+    </body>
+</html>
