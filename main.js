@@ -28,12 +28,12 @@ var ball = {
 }
 
 function setup(){
-  var canvas =  createCanvas(700,600);
+ canvas =  createCanvas(700,600);
 
 canvas.parent("canvas")
   video = createCapture(VIDEO)
   video.size(700,600);
-video.hide()
+  video.hide()
   PoseNet = ml5.poseNet(video, modelLoaded)
   PoseNet.on("pose",gotPose)
 }
@@ -47,16 +47,18 @@ function gotPose(results){
       if(results.length > 0){
 rwx = results[0].pose.rightWrist.x
 rwy = results[0].pose.rightWrist.y
-rws = results[0].pose.rightWrist.score
+rws = results[0].pose.keypoints[10].score
   }
 }
 
 
 function draw(){
-  if(gs=="start")
-image(video,0,0,700,600)
+  image(video,0,0,700,600)
 
- background(0); 
+  if(gs=="start")
+
+  background(0); 
+
 
  fill("black");
  stroke("black");
